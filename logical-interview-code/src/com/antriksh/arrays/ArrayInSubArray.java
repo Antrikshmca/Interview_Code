@@ -27,7 +27,7 @@ public class ArrayInSubArray {
 			}
 
 		}
-		return true;
+		return false;
 	}
 
 	public static void main(String[] args) {

@@ -28,6 +28,7 @@ public class QuickSort {
 		arr[end] = temp;
 	
 		return end;
+		
 	}
 
 	private static void quicsort(int arr[], int l, int h) {

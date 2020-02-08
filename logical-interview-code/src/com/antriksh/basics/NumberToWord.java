@@ -24,7 +24,7 @@ public class NumberToWord {
 
 		int n = 0;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("enter the number \n");
+		System.out.println("enter the number ");
 		n = sc.nextInt();
 		if (n < 0) {
 			System.out.println("enter the number grater then 0");

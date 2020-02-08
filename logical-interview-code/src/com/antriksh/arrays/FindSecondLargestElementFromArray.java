@@ -1,6 +1,6 @@
 package com.antriksh.arrays;
 
-public class SecondLargest {
+public class FindSecondLargestElementFromArray {
 
 	public static void main(String[] args) {
 		int arr[] = { 3, 4, 5, 6, 77, 88, 99 };

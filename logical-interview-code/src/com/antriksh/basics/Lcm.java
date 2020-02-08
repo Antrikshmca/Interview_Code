@@ -3,7 +3,7 @@ package com.antriksh.basics;
 public class Lcm {
 
 	public static void main(String[] args) {
-		int x = findGcd(8, 36);
+		int x = findGcd(15,105);
 		System.out.println(x);
 
 		int y = findLcm(8, 12);
@@ -20,7 +20,7 @@ public class Lcm {
 	}
 
 	private static int findLcm(int a, int b) {
-		return b;
+		return a * b / (findGcd(a, b));
 
 	}
 }

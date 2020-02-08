@@ -10,32 +10,32 @@ public class SpiralMatrix {
 		System.out.println("enter the value of n");
 		int n = sc.nextInt();
 		int arr[][] = new int[n][n];
-		int i = 0;
-		int j = 0;
-		int l = 0;
-		int u = n - 1;
+		int row = 0;
+		int col = 0;
+		int base_row = 0;
+		int last_col = n - 1;
 		for (int num = 1; num <= n * n; num++) {
-			arr[i][j] = num;
-			if (i == l && j < u) {
-				j++;
-			} else if (j == u && i < u) {
-				i++;
-			} else if (i == u && j > l) {
-				j--;
-			} else if (j == l && i > l) {
-				i--;
+			arr[row][col] = num;
+			if (row == base_row && col < last_col) {
+				col++;
+			} else if (col == last_col && row < last_col) {
+				row++;
+			} else if (row == last_col && col > base_row) {
+				col--;
+			} else if (col == base_row && row > base_row) {
+				row--;
 			}
-			if (arr[i][j] != 0) {
-				i++;
-				j++;
-				l++;
-				u--;
+			if (arr[row][col] != 0) {
+				row++;
+				col++;
+				base_row++;
+				last_col--;
 			}
 		}
 		// Display Matrix in Spiral Form
-		for (int row = 0; row < n; row++) {
-			for (int col = 0; col < n; col++) {
-				System.out.print(arr[row][col] + "\t");
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print(arr[i][j] + "\t");
 			}
 			System.out.println("\n");
 		}
