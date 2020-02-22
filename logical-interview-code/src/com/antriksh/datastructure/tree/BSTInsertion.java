@@ -1,0 +1,71 @@
+package com.antriksh.datastructure.tree;
+
+public class BSTInsertion {
+
+	public static void main(String[] args) {
+
+		BSTNode root = BSTDefaultTree2.getDefaultTree();
+		BSTInsertion bstInsertion = new BSTInsertion();
+		bstInsertion.insert(root, 28);
+		System.out.println(" Binary Tree Preorder Traversal");
+		preOrder(root);
+	}
+
+	public static void preOrder(BSTNode root) {
+		if (root != null) {
+			System.out.print(root.data + "\t");
+			preOrder(root.left);
+			preOrder(root.right);
+		}
+	}
+
+	private BSTNode insert(BSTNode root, int data) {
+		BSTNode prev = null;
+		BSTNode crr = root;
+		boolean left = false;
+		while (crr != null) {
+			if (crr.data == data) {
+				throw new IllegalArgumentException();
+			}
+			prev = crr;
+			if (crr.data > data) {
+				crr = crr.left;
+				left = true;
+			} else {
+				crr = crr.right;
+				left = false;
+			}
+		}
+		BSTNode node = new BSTNode(data);
+		if (root == null) {
+			return node;
+		}
+		if (left) {
+			prev.left = node;
+		} else {
+			prev.right = node;
+		}
+		return root;
+	}
+
+	private BSTNode insertWithRecurtion(BSTNode root, int data) {
+		if (root == null) {
+			return new BSTNode(data);
+		}
+		if (root.data > data) {
+			root.left = insertWithRecurtion(root.left, data);
+		}
+		if (root.data < data) {
+			root.right = insertWithRecurtion(root.right, data);
+		}
+		if (root.data == data) {
+			try {
+				throw new Exception("IllegalArgumentException");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return root;
+	}
+}
