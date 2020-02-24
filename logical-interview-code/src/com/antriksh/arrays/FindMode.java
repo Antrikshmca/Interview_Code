@@ -32,7 +32,7 @@ public class FindMode {
 	}
 
 	public static void main(String[] args) {
-		int[] a = { 1, 1, 2, 3, 3 };
+		int[] a = { 1, 1, 2, 3, 3 ,3};
 		FindMode findMode = new FindMode();
 		int result = findMode.findPopular(a);
 		System.out.println(result);

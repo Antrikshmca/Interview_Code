@@ -13,6 +13,7 @@ public class HeapSortWithMaxHeapify {
 	private static void max_Heap(int[] arr, int n, int i) {
 		int large = i;
 		int left = 2 * i + 1;
+		
 		int right = 2 * i + 2;
 
 		if (left < n && arr[left] > arr[large]) {
@@ -41,7 +42,7 @@ public class HeapSortWithMaxHeapify {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = { 11, 12, 13, 6, 7, 8 };
+		int[] arr = { 11, 12, 13,5, 6, 7, 8 };
 		heapify(arr, arr.length);
 		System.out.println(Arrays.toString(arr));
 		sort(arr);

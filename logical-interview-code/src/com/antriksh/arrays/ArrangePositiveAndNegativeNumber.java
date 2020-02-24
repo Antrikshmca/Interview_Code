@@ -19,11 +19,7 @@ public class ArrangePositiveAndNegativeNumber {
 				j++;
 				swapData(arr, i, j);
 			}
-
 		}
-
 		System.out.println(Arrays.toString(arr));
-
 	}
-
 }

@@ -12,6 +12,7 @@ public class ArrayInSubArray {
 
 				if (arr1[i] == arr2[j]) {
 
+					
 					i++;
 					j++;
 				}  

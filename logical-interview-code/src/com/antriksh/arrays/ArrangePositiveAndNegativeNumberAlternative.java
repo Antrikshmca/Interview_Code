@@ -2,7 +2,7 @@ package com.antriksh.arrays;
 
 import java.util.Arrays;
 
-public class ArrangeNegativeAndPositiveNumberAlternative {
+public class ArrangePositiveAndNegativeNumberAlternative {
 
 	public static void swapData(int[] arr, int i, int j) {
 		int temp = arr[i];
@@ -19,10 +19,9 @@ public class ArrangeNegativeAndPositiveNumberAlternative {
 	}
 
 	private static void arrange(int[] arr) {
-
 		int pivot = 0;
 		int j = -1;
-		int neg = 1;
+		int negative = 0;
 		int len = arr.length;
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] < pivot) {
@@ -30,11 +29,11 @@ public class ArrangeNegativeAndPositiveNumberAlternative {
 				swapData(arr, i, j);
 			}
 		}
-		int pos = j + 1;
-		while (pos < len && neg < pos && arr[neg] < 0) {
-			swapData(arr, neg, pos);
-			neg = neg + 2;
-			pos = pos + 1;
+		int postive = j + 1;
+		while (postive < len && negative < postive && arr[negative] < 0) {
+			swapData(arr, negative, postive);
+			negative = negative + 2;
+			postive = postive + 1;
 		}
 	}
 }

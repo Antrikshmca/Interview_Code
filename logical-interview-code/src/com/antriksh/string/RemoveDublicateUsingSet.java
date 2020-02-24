@@ -3,7 +3,7 @@ package com.antriksh.string;
 import java.util.HashSet;
 import java.util.Set;
 
-public class RemoveDublicate {
+public class RemoveDublicateUsingSet {
 	 static String str = "Shivamm";
 	public static void main(String[] args) {
 		 
