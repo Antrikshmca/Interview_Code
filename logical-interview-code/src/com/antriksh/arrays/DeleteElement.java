@@ -11,7 +11,7 @@ public class DeleteElement {
 			arr[i]=arr[i+1];
 			//System.out.println(count);
 		}
-		lenght--;
+		//lenght--;
 		
 		for (int i = 0; i < arr.length-1; i++) {
 			System.out.println(arr[i]);
