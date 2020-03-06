@@ -1,6 +1,6 @@
 package com.antriksh.arrays;
 
-public class MaximumAndMinimu {
+public class FindMaximumAndMinimu {
 
 	public static void main(String[] args) {
 		int arrays[] = { 1, 33, 44, 56, 66, 99 };

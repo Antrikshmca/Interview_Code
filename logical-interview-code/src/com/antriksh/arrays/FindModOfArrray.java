@@ -2,7 +2,7 @@ package com.antriksh.arrays;
 
 import java.util.Arrays;
 
-public class ModOfArrray {
+public class FindModOfArrray {
 	public int mod(int arr[]) {
 	
 		int previous = arr[0], mod = arr[0];
@@ -32,7 +32,7 @@ public class ModOfArrray {
 
 	public static void main(String[] args) {
 		int[] a = { 1,2,2,3,3};
-		ModOfArrray aa = new ModOfArrray();
+		FindModOfArrray aa = new FindModOfArrray();
 		System.out.println(aa.mod(a));
 	}
 
