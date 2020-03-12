@@ -2,19 +2,19 @@ package com.antriksh.datastructure.collection;
 
 import java.util.Stack;
 
-public class findMinElement {
+public class FindMaxElementStack {
 	
 	Stack<Integer> s;
-	Integer minEle;
+	Integer maxEle;
 
 	// Constructor
-	public findMinElement() {
+	public FindMaxElementStack() {
 	
 		s = new Stack<Integer>();
 	}
 
 	// Prints minimum element of MyStack
-	void getMin() {
+	void getMax() {
 		// Get the maximum number in the entire stack
 		if (s.isEmpty())
 			System.out.println("Stack is empty");
@@ -22,7 +22,7 @@ public class findMinElement {
 		// variable maxEle stores the maximum element
 		// in the stack.
 		else
-			System.out.println("Minimum Element in the " + " stack is: " + minEle);
+			System.out.println("Maximum Element in the " + " stack is: " + maxEle);
 	}
 	// prints top element of MyStack
 		void peek() {
@@ -31,30 +31,30 @@ public class findMinElement {
 				return;
 			}
 
-			Integer top = s.peek(); // Top element.
+			Integer t = s.peek(); // Top element.
 
 			System.out.print("Top Most Element is: ");
 
 			// If t < maxEle means maxEle stores
 			// value of t.
-			if (top > minEle)
-				System.out.println(minEle);
+			if (t > maxEle)
+				System.out.println(maxEle);
 			else
-				System.out.println(top);
+				System.out.println(t);
 		}
 
 	void push(Integer x) {
 		if (s.isEmpty()) {
-			minEle = x;
+			maxEle = x;
 			s.push(x);
 			System.out.println("Number Inserted: " + x);
 			return;
 		}
 
 		// If new number is less than original minEle
-		if (x < minEle) {
-			s.push(2 * x - minEle);
-			minEle = x;
+		if (x > maxEle) {
+			s.push(2 * x - maxEle);
+			maxEle = x;
 		} else
 			s.push(x);
 		System.out.println("Number Inserted: " + x);
@@ -70,25 +70,25 @@ public class findMinElement {
 
 		// Minimum will change as the minimum element
 		// of the stack is being removed.
-		if (top < minEle) {
-			System.out.println(minEle);
-			minEle = 2 * minEle - top;
+		if (top > maxEle) {
+			System.out.println(maxEle);
+			maxEle = 2 * maxEle - top;
 		} else
 			System.out.println(top);
 	}
 public static void main(String[] args) {
-	findMinElement s = new findMinElement();
+	FindMaxElementStack s = new FindMaxElementStack();
 	s.push(3);
 	s.push(5);
-	s.getMin();
+	s.getMax();
 	s.push(2);
 	s.push(1);
-	System.out.println("Getting Min Element");
-	s.getMin();
+	System.out.println("Getting Max Element");
+	s.getMax();
 
 	s.pop();
-	System.out.println("Getting Min Element");
-	s.getMin();
+	System.out.println("Getting Max Element");
+	s.getMax();
 	s.pop();
 	s.peek();	
 }
