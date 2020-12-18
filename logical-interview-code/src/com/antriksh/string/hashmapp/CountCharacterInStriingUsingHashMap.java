@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import org.omg.CORBA.portable.ValueInputStream;
 
 public class CountCharacterInStriingUsingHashMap {
 	static String str = "hello";
